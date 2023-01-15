@@ -4,56 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="./main.css">
     <title>Home</title>
 </head>
-<body>
-  <div class="header">
-    <div id="main_time"></div>
-    <div id="main_date"></div>
-  </div>
-  <hr>
-  <div class="left">
-    <div class="box">
-      <input type="text" class="input" id="google_com" onkeydown="if (event.keyCode == 13){google_search(this.value);}" onblur="this.value=''" autofocus>
-      <br>
-      <input type="text" class="input" id="youtube_com" onkeydown="if (event.keyCode == 13){youtube_search(this.value);}" onblur="this.value=''">
-      <br>
-      <input type="text" class="input" id="drive_com" onkeydown="if (event.keyCode == 13){drive_search(this.value);}" onblur="this.value=''">
-      <br>
-  </div>
-  </div>
-  <div class="right">
-    <div class="grid-container">
-      <div class="grid-item">
-        <button type="button" class="btn btn-outline-primary" onclick="location.href = 'https://app.hackthebox.com/home';">HackTheBox</button>
-      </div>
-      <div class="grid-item">
-        <button type="button" class="btn btn-outline-primary" onclick="location.href = 'https://tryhackme.com/dashboard';">TryHackMe</button>
-      </div>
-      <div class="grid-item">
-        <button type="button" class="btn btn-outline-primary" onclick="location.href = 'https://www.linkedin.com/feed/';">LinkedIn</button>
-      </div>
-      <div class="grid-item">
-        <button type="button" class="btn btn-outline-primary" onclick="location.href = 'https://discord.com/channels/@me';">Discord</button>
-      </div>
-      <div class="grid-item">
-        <button type="button" class="btn btn-outline-primary" onclick="location.href = 'https://www.hackerrank.com/dashboard';">HackerRank</button>
-      </div>
-      <div class="grid-item">
-        <button type="button" class="btn btn-outline-primary" onclick="location.href = 'https://github.com/';">Github</button>
-      </div>
-      <div class="grid-item">
-        <button type="button" class="btn btn-outline-primary" onclick="location.href = 'https://mail.google.com/mail/u/0/#inbox';">Gmail</button>
-      </div>
-      <div class="grid-item">
-        <button type="button" class="btn btn-outline-primary" onclick="location.href = 'https://classroom.google.com/u/0/h';">Classroom</button>
-      </div>
-      <div class="grid-item"></div>
+<body onload="animatebox();">
+  <nav>
+    <div>
+      <div id="main_time"></div>
+      <div id="main_date"></div>
     </div>
-  </div>
+  </nav>
+  <main>
+    <div class="row searches">
+      <img src="./searchengin.svg" alt="Search">
+      <input type="text" class="search" placeholder="Google" id="gs" onfocus="focusitem(this.id);" onblur="bluritem();" onkeydown="if (event.keyCode == 13){google_search(this.value);}" autofocus>
+      <input type="text" class="search" placeholder="Youtube" id="yts" onfocus="focusitem(this.id);" onblur="bluritem();" onkeydown="if (event.keyCode == 13){youtube_search(this.value);}">
+      <input type="text" class="search" placeholder="Drive" id="ds" onfocus="focusitem(this.id);" onblur="bluritem();" onkeydown="if (event.keyCode == 13){drive_search(this.value);}">
+    </div>
+    <br>
+    <div class="row">
+      <div class="side design" style="width: 40%;">
+        <div class="row" id="1">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row" id="2">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row" id="3">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row" id="4">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row" id="5">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row" id="6">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row" id="7">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row" id="8">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row" id="9">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="row" id="10">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        
+        
+      </div>
+      <div class="side" style="width: 60%;">
+        <div class="row">
+          <a href="https://web.whatsapp.com/">WhatsApp</a>
+          <a href="https://app.hackthebox.com/home">Gmail (Main)</a>
+          <a href="https://mail.google.com/mail/u/0/#inbox">Gmail (CRCE)</a>
+        </div>
+        <div class="row">
+          <a href="https://github.com/">Github</a>
+          <a href="https://www.linkedin.com/feed/">HackTheBox</a>
+          <a href="https://tryhackme.com/dashboard">TryHackMe</a>
+        </div>
+        <div class="row">
+          <a href="https://www.hackerrank.com/dashboard">HackerRank</a>
+          <a href="https://stackoverflow.com/">StackOverflow</a>
+          <a href="https://codepen.io/trending">CodePen</a>
+        </div>
+        <div class="row">
+          <a href="https://www.workatastartup.com/internships">YCombinator</a>
+          <a href="https://temp-mail.org/en/">TempMail</a>
+          <a href="https://vercel.com/">Vercel</a>
+        </div>
+        <div class="row">
+          <a href="https://www.instagram.com/">Instagram</a>
+          <a href="https://www.linkedin.com/feed/">LinkedIn</a>
+          <a href="https://discord.com/channels/@me">Discord</a>
+        </div>
+      </div>
+    </div>
+  </main>
   <script src="./main.js"></script>
-    
 </body>
 </html>
