@@ -5,12 +5,6 @@ yts = document.getElementById("yts");
 gs = document.getElementById("gs");
 ds = document.getElementById("ds");
 
-document.dispatchEvent(new KeyboardEvent("keydown", {
-    key: "Esc",
-    keyCode: 27, // example values.
-    code: "Esc", // put everything you need in this object.
-    which: 27
-}));
 
 function refreshTime(){
     document.getElementById("main_time").textContent = new Date().toLocaleTimeString();
@@ -60,7 +54,7 @@ function bluritem(){
 }
 numbers = ["one","two","three","four","five","six","seven","eight"];
 colours = ["red","green","yellow","blue"];
-blocks = ["HTML","CSS","JS","C++","Python","Java","Bash","GoLang","C","Django","AIML","Cybersec"];
+blocks = ["HTML","CSS","JS","C++","Python","Java","Bash","GoLang","C","Django","AIML","Cybersec","mySQL","SQLite3","Linux", "Git"];
 
 function animatebox(){
     for (let i = 1; i < 11; i++) {
@@ -75,3 +69,11 @@ function animatebox(){
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
+$('.design').on('mouseover', 'span', function() {
+    if (this.classList.contains("hovered")){
+        this.classList.remove("hovered");
+    }
+    else{
+        this.classList.add("hovered");
+    }
+});

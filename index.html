@@ -14,11 +14,14 @@
       <div id="main_time"></div>
       <div id="main_date"></div>
     </div>
+    <div class="side">
+      <img src="./Logo.svg" class="logo" alt="">
+    </div>
   </nav>
   <main>
     <div class="row searches">
-      <img src="./searchengin.svg" alt="Search">
-      <input type="text" class="search" placeholder="Google" id="gs" onfocus="focusitem(this.id);" onblur="bluritem();" onkeydown="if (event.keyCode == 13){google_search(this.value);}" autofocus>
+      <img src="./searchengin.svg" class="icon" alt="Search">
+      <input type="text" class="search" placeholder="Google" id="gs" onfocus="focusitem(this.id);" onblur="bluritem();" onkeydown="if (event.keyCode == 13){google_search(this.value);}">
       <input type="text" class="search" placeholder="Youtube" id="yts" onfocus="focusitem(this.id);" onblur="bluritem();" onkeydown="if (event.keyCode == 13){youtube_search(this.value);}">
       <input type="text" class="search" placeholder="Drive" id="ds" onfocus="focusitem(this.id);" onblur="bluritem();" onkeydown="if (event.keyCode == 13){drive_search(this.value);}">
     </div>
@@ -54,19 +57,17 @@
         </div>
         <div class="row" id="10">
           <span></span><span></span><span></span><span></span><span></span><span></span>
-        </div>
-        
-        
+        </div>        
       </div>
       <div class="side" style="width: 60%;">
         <div class="row">
           <a href="https://web.whatsapp.com/">WhatsApp</a>
-          <a href="https://app.hackthebox.com/home">Gmail (Main)</a>
+          <a href="https://mail.google.com/mail/u/1/#inbox">Gmail (Main)</a>
           <a href="https://mail.google.com/mail/u/0/#inbox">Gmail (CRCE)</a>
         </div>
         <div class="row">
           <a href="https://github.com/">Github</a>
-          <a href="https://www.linkedin.com/feed/">HackTheBox</a>
+          <a href="https://app.hackthebox.com/home">HackTheBox</a>
           <a href="https://tryhackme.com/dashboard">TryHackMe</a>
         </div>
         <div class="row">
@@ -87,6 +88,7 @@
       </div>
     </div>
   </main>
+  <script src="./jquery.js"></script>
   <script src="./main.js"></script>
 </body>
 </html>

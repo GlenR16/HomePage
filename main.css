@@ -64,6 +64,7 @@ main{
 a{
     margin: 10px;
     font-size: 25px;
+    font-weight: 500;
     text-decoration: none;
     color: var(--fg);
     background-color: var(--bg);
@@ -71,11 +72,12 @@ a{
     padding: 10px;
     border-radius: 15px;
     border: 3px solid var(--theme);
-    width: 25%;
+    width: 22.5%;
 }
 a:hover{
     background-color: var(--theme);
     color: var(--bg);
+
 }
 input{
     background-color: var(--bg);
@@ -103,32 +105,58 @@ input{
     border-bottom-left-radius: 0px;
     border-left: none;
 }
-img{
+/* Images */
+img.icon{
     height: 45px;
     margin: 0px 10px;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(132deg) brightness(102%) contrast(104%);
 }
+img.logo{
+    height: 110px;
+    margin: 0px 0px;
+}
+img.logo:hover{
+}
 /* Decoration */
+.red{
+    --color:#FD8A8A;
+    background-color: #FD8A8A;
+}
+.green{
+    --color:#F1F7B5;
+    background-color: #F1F7B5;
+}
+.yellow{
+    --color:#A8D1D1;
+    background-color: #A8D1D1;
+}
+.blue{
+    --color:#9EA1D4;
+    background-color: #9EA1D4;
+}
+
 span{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--theme);
-    border-radius: 15px;
+    border-radius: 999px;
     margin: 4px;
-    height: 25px;
+    height: 30px;
     color: var(--bg);
     font-weight: bold;
     padding: 0px 15px;
-
 }
 span:hover{
     background-color: var(--bg);
-    color: var(--fg);
-    cursor:grab;
+    color: var(--color);
+    cursor: default;
 }
-
+.hovered{
+    background-color: var(--bg);
+    color: var(--color);
+}
 .one{
     width: 10%;
 }
@@ -153,24 +181,11 @@ span:hover{
 .eight{
     width: 80%;
 }
-
-
-.red{
-    background-color: #FD8A8A;
-}
-.green{
-    background-color: #F1F7B5;
-}
-.yellow{
-    background-color: #A8D1D1;
-}
-.blue{
-    background-color: #9EA1D4;
-}
-
 .design{
     margin: 20px;
 }
 .design > *{
     justify-content: stretch;
 }
+
+
