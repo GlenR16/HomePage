@@ -188,4 +188,35 @@ span:hover{
     justify-content: stretch;
 }
 
-
+@media only screen and (max-width: 1200px) {
+    .main{
+        display: flex;
+        flex-direction:column-reverse !important;
+    }
+    .design{
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    .main > .side{
+        width: 100% !important;
+        margin: 15px 0px;
+    }
+    nav{
+        width: 95%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        width: 95%;
+        padding: 10px;
+    }
+    .row{
+        width: 100%;
+    }
+    a{
+        margin: 5px;
+        width: 33%;
+    }
+  }
